@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Demo 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Event Handling Example</h1>
+    <button id="showMessageBtn">Click Me</button>
+    <p id="message"></p>
+
+    <script>
+        document.getElementById('showMessageBtn').addEventListener('click', function() {
+            document.getElementById('message').textContent = 'Hello, this is a JavaScript event handler!';
+        });
+    </script>
+    <a href="index.html">Back to Home</a>
+</body>
+</html>
