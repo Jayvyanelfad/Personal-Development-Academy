@@ -7,24 +7,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Form Validation Example</h1>
-    <form id="demoForm">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <button type="submit">Submit</button>
-    </form>
+    <header>
+        <h1>JavaScript Demo 2</h1>
+    </header>
+    
+    <section>
+        <h2>Welcome to JavaScript Demo 2</h2>
+        <p>This demo covers loops, arrays, and objects in JavaScript.</p>
+    </section>
 
-    <script>
-        document.getElementById('demoForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const email = document.getElementById('email').value;
-            if (!email.includes('@')) {
-                alert('Invalid email');
-            } else {
-                alert('Form submitted successfully');
-            }
-        });
-    </script>
-    <a href="index.html">Back to Home</a>
+    <section>
+        <h3>Other Courses Offered:</h3>
+        <ul>
+            <li><a href="figma.html">Figma Design Course</a></li>
+            <li><a href="nodejs.html">NodeJS Crash Course</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p><a href="courses.html">Back to Courses</a></p>
+    </footer>
 </body>
 </html>
