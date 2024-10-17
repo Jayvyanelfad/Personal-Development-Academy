@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enroll in Personal Development Academy</title>
+    <title>Enroll</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Enroll in the Academy</h1>
-    </header>
-    
-    <section>
-        <p>Thank you for your interest! Enrollment is currently closed, but feel free to explore our courses and resources. Stay tuned for our next enrollment session!</p>
-    </section>
+    <h1>Course Enrollment</h1>
+    <form id="enrollmentForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
 
-    <footer>
-        <p><a href="index.html">Back to Home</a></p>
-    </footer>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="gmail">Gmail:</label>
+        <input type="email" id="gmail" name="gmail" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <p id="confirmationMessage"></p>
+
+    <script src="enroll.js"></script>
 </body>
 </html>
