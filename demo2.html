@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Demo 2</title>
+    <title>Form Validation Demo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>JavaScript Demo 2</h1>
-    </header>
-    
-    <section>
-        <h2>Welcome to JavaScript Demo 2</h2>
-        <p>This demo covers loops, arrays, and objects in JavaScript.</p>
-    </section>
+    <h1>Form Validation</h1>
+    <form onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
 
-    <section>
-        <h3>Other Courses Offered:</h3>
-        <ul>
-            <li><a href="figma.html">Figma Design Course</a></li>
-            <li><a href="nodejs.html">NodeJS Crash Course</a></li>
-        </ul>
-    </section>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-    <footer>
-        <p><a href="courses.html">Back to Courses</a></p>
-    </footer>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let username = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+
+            if (username === "" || email === "") {
+                alert("All fields must be filled out.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
 </body>
 </html>
